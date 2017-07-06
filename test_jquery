@@ -1,0 +1,8 @@
+var values = new Array();
+
+$.each($("input[name='case[]']:checked").closest("td").siblings("td"),
+       function () {
+            values.push($(this).text());
+       });
+
+   alert("val---" + values.join(", "));
